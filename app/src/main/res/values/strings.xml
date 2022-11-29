@@ -20,5 +20,7 @@
     <string name="email_address">Email address</string>
     <string name="mobile_number">Mobile Number</string>
     <string name="save">Save</string>
+    <string name="enter_missing">Enter missing fields</string>
+    <string name="customer_saved">Customer has been saved</string>
 
 </resources>
