@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ahmed.crm.ui.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" >
+    </fragment>
+    <fragment
+        android:id="@+id/followUpFragment"
+        android:name="com.ahmed.crm.ui.follow_up.FollowUpFragment"
+        android:label="@string/followers"
+        tools:layout="@layout/fragment_follow_up" />
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.ahmed.crm.ui.add.AddFragment"
+        android:label="@string/add_customer"
+        tools:layout="@layout/fragment_add" />
+
+</navigation>
