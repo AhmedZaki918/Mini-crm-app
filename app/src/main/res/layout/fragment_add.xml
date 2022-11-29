@@ -7,15 +7,163 @@
     tools:context=".ui.add.AddFragment">
 
 
+    <!--  Edittext for name  -->
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:foreground="@drawable/layout_border_edittext"
+        android:hint="@string/your_name"
+        android:inputType="textPersonName"
+        android:padding="8dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_name"
+        tools:ignore="UnusedAttribute" />
+
+
+    <!--  Name header  -->
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_name_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add fragment"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="8dp"
+        android:text="@string/full_name"
+        android:textColor="@color/teal_700"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_name"
+        app:layout_constraintStart_toEndOf="@+id/iv_name"
+        app:layout_constraintTop_toTopOf="@+id/iv_name" />
+
+
+    <!--  Mail header  -->
+    <TextView
+        android:id="@+id/tv_mail_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/email"
+        android:textColor="@color/teal_700"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_email"
+        app:layout_constraintStart_toEndOf="@+id/iv_email"
+        app:layout_constraintTop_toTopOf="@+id/iv_email" />
+
+
+    <!--  Edittext for email  -->
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:foreground="@drawable/layout_border_edittext"
+        android:hint="@string/email_address"
+        android:inputType="textEmailAddress"
+        android:padding="8dp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_email"
+        tools:ignore="UnusedAttribute" />
+
+
+    <!--  Icon for name   -->
+    <ImageView
+        android:id="@+id/iv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_baseline_customer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        tools:ignore="ContentDescription" />
+
+
+    <!--  Icon for email   -->
+    <ImageView
+        android:id="@+id/iv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_baseline_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_name"
+        tools:ignore="ContentDescription" />
+
+
+    <!--  Icon for mobile   -->
+    <ImageView
+        android:id="@+id/iv_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_baseline_phone_android"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        tools:ignore="ContentDescription" />
+
+
+    <!--  Mobile header  -->
+    <TextView
+        android:id="@+id/tv_mobile_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/mobile_number"
+        android:textColor="@color/teal_700"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_mobile"
+        app:layout_constraintStart_toEndOf="@+id/iv_mobile"
+        app:layout_constraintTop_toTopOf="@+id/iv_mobile" />
+
+
+    <!--  Edittext for mobile number  -->
+    <EditText
+        android:id="@+id/et_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:foreground="@drawable/layout_border_edittext"
+        android:hint="@string/mobile_number"
+        android:inputType="phone"
+        android:padding="8dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_mobile"
+        tools:ignore="UnusedAttribute" />
+
+
+    <!-- Save Button  -->
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="@string/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_mobile" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

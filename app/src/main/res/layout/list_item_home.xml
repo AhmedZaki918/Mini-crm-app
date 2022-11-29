@@ -104,14 +104,15 @@
 
     <ImageButton
         android:id="@+id/ib_call"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:background="null"
+        android:background="@null"
+        android:contentDescription="@string/call_customer_content_desc"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_name"
-        app:srcCompat="@drawable/ic_baseline_call"
-        android:contentDescription="@string/call_customer_content_desc" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_call" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
