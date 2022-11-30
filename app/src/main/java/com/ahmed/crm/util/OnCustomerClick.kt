@@ -6,4 +6,5 @@ interface OnCustomerClick {
 
     fun onFollowingClicked(customer: Customer)
     fun onCallClicked(mobileNumber: String)
+    fun onItemClicked(customer: Customer)
 }

@@ -24,4 +24,10 @@ class SharedViewModel @Inject constructor(val repo: CustomerRepo) : ViewModel() 
             repo.updateCustomer(customer)
         }
     }
+
+    fun deleteCustomer(customer: Customer){
+        viewModelScope.launch {
+            repo.deleteCustomer(customer)
+        }
+    }
 }

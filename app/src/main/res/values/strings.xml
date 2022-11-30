@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">CRM</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
 
     <!--  Content description  -->
     <string name="call_customer_content_desc">call customer</string>
+    <string name="delete_customer_desc">Delete customer</string>
+
 
     <!--  Home Screen  -->
     <string name="home">Home</string>
@@ -13,6 +13,9 @@
     <string name="add_customer">Add Customer</string>
     <string name="follow">Follow</string>
     <string name="following">Following</string>
+    <string name="unfollowing">Unfollowing</string>
+    <string name="no_customers_found">No customers found..</string>
+
 
     <!--  Add customer screen  -->
     <string name="full_name">Full Name</string>
@@ -23,6 +26,14 @@
     <string name="save">Save</string>
     <string name="enter_missing">Enter missing fields</string>
     <string name="customer_saved">Customer has been saved</string>
-    <string name="no_customers_found">No customers found..</string>
+
+
+    <!-- Details screen   -->
+    <string name="details">Details</string>
+    <string name="customer_info">Customer info</string>
+    <string name="full_name_details">Full name</string>
+    <string name="mobile_number_details">Mobile number</string>
+    <string name="following_status">Following status</string>
+    <string name="customer_deleted">Customer has been deleted</string>
 
 </resources>

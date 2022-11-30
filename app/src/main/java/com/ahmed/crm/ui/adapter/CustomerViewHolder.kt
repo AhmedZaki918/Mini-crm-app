@@ -16,6 +16,7 @@ class CustomerViewHolder(
     init {
         binding.btnFollow.setOnClickListener(this)
         binding.ibCall.setOnClickListener(this)
+        itemView.setOnClickListener(this)
     }
 
     var customer: Customer? = null
@@ -41,38 +42,45 @@ class CustomerViewHolder(
     }
 
     override fun onClick(item: View) {
-        if (item.id == R.id.btn_follow) {
+        when (item.id) {
+            R.id.btn_follow -> {
 
-            binding.apply {
-                if (customer?.following!!) {
-                    btnFollow.alpha = 1f
-                    btnFollow.text = root.context.getString(R.string.follow)
+                binding.apply {
+                    if (customer?.following!!) {
+                        btnFollow.alpha = 1f
+                        btnFollow.text = root.context.getString(R.string.follow)
 
-                    onCustomerClick.onFollowingClicked(
-                        Customer(
-                            customer?.mobile!!,
-                            customer?.name,
-                            customer?.email,
-                            false
+                        onCustomerClick.onFollowingClicked(
+                            Customer(
+                                customer?.mobile!!,
+                                customer?.name,
+                                customer?.email,
+                                false
+                            )
                         )
-                    )
 
-                } else {
-                    btnFollow.alpha = 0.4f
-                    btnFollow.text = root.context.getString(R.string.following)
+                    } else {
+                        btnFollow.alpha = 0.4f
+                        btnFollow.text = root.context.getString(R.string.following)
 
-                    onCustomerClick.onFollowingClicked(
-                        Customer(
-                            customer?.mobile!!,
-                            customer?.name,
-                            customer?.email,
-                            true
+                        onCustomerClick.onFollowingClicked(
+                            Customer(
+                                customer?.mobile!!,
+                                customer?.name,
+                                customer?.email,
+                                true
+                            )
                         )
-                    )
+                    }
                 }
             }
-        } else {
-            onCustomerClick.onCallClicked(customer?.mobile!!)
+            R.id.ib_call -> {
+                onCustomerClick.onCallClicked(customer?.mobile!!)
+            }
+            else -> {
+                // Go to the details of customer info
+                onCustomerClick.onItemClicked(customer!!)
+            }
         }
     }
 }

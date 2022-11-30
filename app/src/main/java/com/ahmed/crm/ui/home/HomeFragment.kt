@@ -5,7 +5,7 @@ import android.net.Uri
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import androidx.lifecycle.ViewModelProvider
-import com.ahmed.crm.data.local.CustomerDao
+import androidx.navigation.fragment.findNavController
 import com.ahmed.crm.data.model.Customer
 import com.ahmed.crm.databinding.FragmentHomeBinding
 import com.ahmed.crm.ui.adapter.CustomersAdapter
@@ -13,7 +13,6 @@ import com.ahmed.crm.util.BaseFragment
 import com.ahmed.crm.util.OnCustomerClick
 import com.ahmed.crm.util.SharedViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 
 @AndroidEntryPoint
@@ -21,10 +20,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     OnCustomerClick {
 
     private lateinit var viewModel: SharedViewModel
-
-    @Inject
-    lateinit var customerDao: CustomerDao
-
 
     override fun FragmentHomeBinding.initialize() {
         viewModel = ViewModelProvider(this@HomeFragment)[SharedViewModel::class.java]
@@ -41,6 +36,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         startActivity(
             Intent(Intent.ACTION_DIAL, Uri.parse("tel:$mobileNumber"))
         )
+    }
+
+    override fun onItemClicked(customer: Customer) {
+        val action = HomeFragmentDirections.actionHomeFragmentToDetailsFragment(customer)
+        findNavController().navigate(action)
     }
 
     private fun updateUi(customers: List<Customer>) {

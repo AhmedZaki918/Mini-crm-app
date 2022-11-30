@@ -10,16 +10,28 @@
         android:name="com.ahmed.crm.ui.home.HomeFragment"
         android:label="@string/home"
         tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/followUpFragment"
-        android:name="com.ahmed.crm.ui.follow_up.FollowUpFragment"
-        android:label="@string/followers"
-        tools:layout="@layout/fragment_follow_up" />
+
     <fragment
         android:id="@+id/addFragment"
         android:name="com.ahmed.crm.ui.add.AddFragment"
         android:label="@string/add_customer"
         tools:layout="@layout/fragment_add" />
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.ahmed.crm.ui.details.DetailsFragment"
+        android:label="@string/details"
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="customer"
+            app:argType="com.ahmed.crm.data.model.Customer" />
+    </fragment>
 
 </navigation>

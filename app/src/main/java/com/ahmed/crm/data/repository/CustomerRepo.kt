@@ -18,4 +18,8 @@ class CustomerRepo @Inject constructor(private val dao: CustomerDao) {
     suspend fun updateCustomer(customer: Customer?){
         dao.updateCustomer(customer)
     }
+
+    suspend fun deleteCustomer(customer: Customer){
+        dao.deleteCustomer(customer)
+    }
 }

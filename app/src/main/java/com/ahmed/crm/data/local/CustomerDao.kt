@@ -1,11 +1,7 @@
 package com.ahmed.crm.data.local
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 import com.ahmed.crm.data.model.Customer
 
 @Dao
@@ -19,4 +15,7 @@ interface CustomerDao {
 
     @Update
     suspend fun updateCustomer(customer: Customer?)
+
+    @Delete
+    suspend fun deleteCustomer(customer: Customer)
 }

@@ -11,7 +11,7 @@
     <color name="border_edittext">#80ABB6C3</color>
     <color name="custom_black">#33000000</color>
     <color name="button">#FFC107</color>
-
+    <color name="backgroundText">#eaeff4</color>
 
 
 </resources>
