@@ -12,6 +12,7 @@
     <string name="add">Add</string>
     <string name="add_customer">Add Customer</string>
     <string name="follow">Follow</string>
+    <string name="following">Following</string>
 
     <!--  Add customer screen  -->
     <string name="full_name">Full Name</string>
@@ -22,5 +23,6 @@
     <string name="save">Save</string>
     <string name="enter_missing">Enter missing fields</string>
     <string name="customer_saved">Customer has been saved</string>
+    <string name="no_customers_found">No customers found..</string>
 
 </resources>

@@ -5,6 +5,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Update
 import com.ahmed.crm.data.model.Customer
 
 @Dao
@@ -15,4 +16,7 @@ interface CustomerDao {
 
     @Query("SELECT * FROM customers")
     fun getCustomers(): LiveData<List<Customer>>
+
+    @Update
+    suspend fun updateCustomer(customer: Customer?)
 }
